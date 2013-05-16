@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block encabezado %} 
+
+{% endblock %}
+
+{% block contenido %}
+
+
+{% for elemento in lista %}
+<content>
+<div class=listado>
+<ul = class= boxProducto><br>
+	<dir><li>Zapato : {{elemento.tipo}} {{elemento.marca}}</li></dir></br>
+	<dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
+		{%for elem in series %}
+			{%if elem.zapato = elemento%}
+			<ul>
+				<li>pvp : {{elem.pvp}}</li>
+			</ul>
+			{% endif %}
+		{% endfor %}
+</ul></div>
+
+</content>
+{% endfor %}
+{% endblock %}

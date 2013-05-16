@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block encabezado %} 
+
+{% endblock %}
+
+{% block contenido %}
+
+<nav>
+<center>
+<div class=listado>
+<ul><br><br><br><br>
+<dir><li><h4>Zapato : {{dato.tipo}} {{dato.marca}}</h4></li></dir></br>
+<dir><li><h4>Descripción : {{dato.descripcion}}</h4></li></dir></br>
+<dir><li><h4>Genero :{{dato.genero}}</h4></li></dir></br>
+<dir><li><h4>Marca :{{dato.marca}}</h4></li></dir></br>
+<dir><img src='{{MEDIA_URL}}{{dato.imagen}}'></dir></br></br>
+	{% for item in datos_zapato %}
+		<dir><li><h4>Serie del {{item.minymax}}, PVP :{{item.pvp}} €</h4></li></dir></br>
+	{% endfor %}
+   </ul></div>
+</center>
+
+</nav>
+
+  <footer>
+
+
+  			<div id="footer">
+				<div class="left"><br>
+					<a href="/">Inicio</a>
+						<span>|</span>
+					<a href="/proovedores">Proovedores</a>
+						<span>|</span>
+					<a href="/marcas">Marcas</a>
+						<span>|</span>
+					<a href="/sobre">Sobre Garabatos</a>
+						<span>|</span>
+					<a href="/contacto">Contáctanos!</a>
+				</div>
+					
+			</div>
+				<!-- End Footer -->
+			
+			
+  </footer>
+{% endblock %}
+
+

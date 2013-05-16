@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block encabezado %} 
+
+{% endblock %}
+
+{% block contenido %}
+<center>
+<button><a href="{% url 'ninos'%}"> Niños</a></button>
+<button><a href="{% url 'ninas'%}"> Niñas</a></button>
+<button><a href="{% url 'uni'%}"> Unisex</a></button></h2></center>
+{% for elemento in lista %}
+<content>
+<div class=listado><center>
+<ul = class= boxProducto><br>
+	<dir><li><h4><a href="{% url 'principal_productos' elemento.id %}"> {{elemento.tipo}} {{elemento.marca}} </a></h4></li></dir></br>
+<dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
+</ul></div>
+</center>
+</content>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block encabezado %} 
+
+{% endblock %}
+
+{% block contenido %}
+<br><br><br>
+{% for elemento in marca %}
+
+<content>
+<div class=listado><center>
+<ul = class= boxProducto><br>
+	<dir><li><a href="{% url 'principal_marcas' elemento.id %}">{{elemento.nombre}} </a></li></dir></br>
+<dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
+</ul></center>
+</div>
+</content>
+
+{% endfor %}
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <footer>
+		<div id="top">
+  			<div id="footer">
+				<div class="left"><br>
+					<a href="/">Inicio</a>
+						<span>|</span>
+					<a href="/proovedores">Proovedores</a>
+						<span>|</span>
+					<a href="/marcas">Marcas</a>
+						<span>|</span>
+					<a href="/sobre">Sobre Garabatos</a>
+						<span>|</span>
+					<a href="/contacto">Contáctanos!</a>
+				</div>
+					
+			</div>
+				<!-- End Footer -->
+			
+		</div>			
+  </footer>
+
+{% endblock %}
