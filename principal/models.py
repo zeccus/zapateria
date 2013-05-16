@@ -18,8 +18,14 @@ class Zapato(models.Model):
     color = models.ManyToManyField("Color")
     genero = models.ForeignKey("Genero")
     marca = models.ForeignKey("Marca")
-    tipo = models.TextField()
+    tipo = models.ForeignKey("Tipo")
     descripcion = models.TextField(help_text="descripcion del zapato")
+    imagen = models.ImageField(upload_to = 'zapateria/media/')
+    def __unicode__(self):
+        return unicode(self.tipo)
+
+class Tipo(models.Model):
+    tipo = models.TextField(verbose_name='tipo de zapato')
     imagen = models.ImageField(upload_to = 'zapateria/media/')
     def __unicode__(self):
         return self.tipo

@@ -2,30 +2,29 @@
 
 {% comment %} Aqui van comentarios {% endcomment %}
 
-{% block titulo %}{% endblock %}
+{% block titulo %} Inicio {% endblock %}
 
 {% block encabezado %} 
 
 {% endblock %}
 
 {% block contenido %}
+<br><br><br>
+{% for elemento in zapato %} 
+<content>
+<div class=listado><center>
+<ul = class= boxProducto><br>
+	<dir><li><h4><a href="{% url 'principal_productos' elemento.id %}"> {{dato.tipo}} {{elemento.marca}} </a></h4></li></dir></br>
+<dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
+</ul></div>
+</center>
+</content>
 
-
-{% for elemento in proovedores %}
-<nav><h5><ul><center></br></br></br></br></br></br>
-
-<li>Nif Empresa:{{elemento.NifDNI}}</li></br>
-<li>Nombre Proovedor : {{elemento.nombre}}</li></br>
-<li>Direccion : {{elemento.direccion}}</li></br>
-<li>Telefono: {{elemento.telf}}</li></br>
-<li>Telefono Viajante : {{elemento.telf_viajante}}</li></center>
-</ul></h5></nav></br>
 {% endfor %}
-
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer>
 
-  	<div id="bop">
+<div id="bop">
   			<div id="footer">
 				<div class="left"><br>
 					<a href="/">Inicio</a>
@@ -41,7 +40,9 @@
 					
 			</div>
 				<!-- End Footer -->
-	</div>			
+			
+		</div>	
 			
   </footer>
 {% endblock %}
+

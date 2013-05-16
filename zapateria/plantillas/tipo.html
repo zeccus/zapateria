@@ -9,29 +9,22 @@
 {% endblock %}
 
 {% block contenido %}
+<br><br><br>
+{% for elemento in tipo %}
 
-<nav>
-<center>
-<div class=listado>
-<ul><br><br><br><br>
-<dir><li><h4>Zapato : {{dato.tipo}} {{dato.marca}}</h4></li></dir></br>
-<dir><li><h4>Descripción : {{dato.descripcion}}</h4></li></dir></br>
-<dir><li><h4>Genero :{{dato.genero}}</h4></li></dir></br>
-<dir><li><h4>Marca :{{dato.marca}}</h4></li></dir></br>
+<content>
+<div class=listado><center>
+<ul = class= boxProducto><br>
+	<dir><li><a href="{% url 'principal_tipos' elemento.id %}">{{elemento.tipo}} </a></li></dir></br>
+<dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
+</ul></center>
+</div>
+</content>
 
-
-<dir><img src='{{MEDIA_URL}}{{dato.imagen}}'></dir></br></br>
-	{% for item in datos_zapato %}
-		<dir><li><h4>Serie del {{item.minymax}}, PVP :{{item.pvp}} €</h4></li></dir></br>
-	{% endfor %}
-   </ul></div>
-</center>
-
-</nav>
-
+{% endfor %}<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer>
-
-<div id="bop">
+		<div id="bop">
   			<div id="footer">
 				<div class="left"><br>
 					<a href="/">Inicio</a>
@@ -48,9 +41,7 @@
 			</div>
 				<!-- End Footer -->
 			
-		</div>	
-			
+		</div>			
   </footer>
+
 {% endblock %}
-
-

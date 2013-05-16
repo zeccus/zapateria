@@ -1,4 +1,4 @@
-from principal.models import Empleados,Almacen,Zapato,Series,numeroSeries,Genero,Color,Marca,Persona,Cabecera,Detalle
+from principal.models import Empleados,Almacen,Zapato,Series,numeroSeries,Genero,Color,Marca,Persona,Cabecera,Detalle,Tipo
 from django.contrib import admin
 admin.site.register(Empleados)
 admin.site.register(Almacen)
@@ -11,4 +11,5 @@ admin.site.register(Persona)
 admin.site.register(Cabecera)
 admin.site.register(Detalle)
 admin.site.register(numeroSeries)
+admin.site.register(Tipo)
 

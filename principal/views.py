@@ -1,4 +1,4 @@
-from principal.models import Empleados,Almacen,Zapato,Series,Genero,Color,Marca,Persona,Cabecera,Detalle
+from principal.models import Empleados,Almacen,Zapato,Series,Genero,Color,Marca,Persona,Cabecera,Detalle,Tipo
 from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
@@ -49,8 +49,13 @@ def zapato_marca(request, id_marca):
 	context_instance = RequestContext(request)
 	return render_to_response('producto_marca.html',{'dato':dato, 'zapato':zapato},context_instance)
 
+def tipo(request):
+	tipo = Tipo.objects.all()
+	context_instance = RequestContext(request)
+	return render_to_response('tipo.html',{'tipo':tipo},context_instance)
 
-
-
-
-	
+def tipo_zapato (request, id_tipo):
+	dato = get_object_or_404(Tipo, pk=id_tipo)
+	zapato = Zapato.objects.filter (tipo = dato)
+	context_instance = RequestContext(request)
+	return render_to_response('productos_tipo.html',{'dato':dato,'zapato':zapato},context_instance)
