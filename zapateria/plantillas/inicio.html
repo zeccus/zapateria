@@ -16,37 +16,36 @@
 <a class="boton" href="{% url 'uni'%}"> Unisex</a></center>  
 </br></br></br>
 {% for elemento in lista %} 
-<content>
-<div class=listado><center>
-<ul = class= boxProducto><br>
-	<dir><li><h4><a href="{% url 'principal_productos' elemento.id %}"> {{elemento.tipo}} {{elemento.marca}} </a></h4></li></dir></br>
-<dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
-</ul></div>
-</center>
-</content>
 
-{% endfor %}{% endblock %}{% block pie %}
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <footer>
+
+	<div class=listado><center>
+		<ul = class= boxProducto><br>
+			<dir><li><h4><a href="{% url 'principal_productos' elemento.id %}"> {{elemento.tipo}} {{elemento.marca}} </a></h4></li></dir></br>
+			<dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
+		</ul></div>
+	</center>
+
+
+{% endfor %}
+{% endblock %}{% block pie %}<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<div id="bop">
   			<div id="footer">
-				<div class="left"><br>
-					<a href="/">Inicio</a>
-						<span>|</span>
-					<a href="/proovedores">Proovedores</a>
-						<span>|</span>
-					<a href="/marcas">Marcas</a>
-						<span>|</span>
-					<a href="/sobre">Sobre Garabatos</a>
-						<span>|</span>
-					<a href="/contacto">Contáctanos!</a>
-				</div>
-					
-			</div>
-				<!-- End Footer -->
-			
+  				<div class="left"><br>	
+					<div id="navigation">
+						<a href="/">Inicio</a>
+							<span>|</span>
+						<a href="/proovedores">Proovedores</a>
+							<span>|</span>
+						<a href="/marcas">Marcas</a>
+							<span>|</span>
+						<a href="/sobre">Sobre Garabatos</a>
+							<span>|</span>
+						<a href="/contacto">Contáctanos!</a>
+					</div>
+				</div>	
+			</div>				
 		</div>			
   </footer>
-
 
 {% endblock %}

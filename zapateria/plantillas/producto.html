@@ -14,15 +14,15 @@
 <center>
 <div class=listado>
 <ul><br><br><br><br>
-<dir><li><h4>Zapato : {{dato.tipo}} {{dato.marca}}</h4></li></dir></br>
-<dir><li><h4>Descripción : {{dato.descripcion}}</h4></li></dir></br>
-<dir><li><h4>Genero :{{dato.genero}}</h4></li></dir></br>
-<dir><li><h4>Marca :{{dato.marca}}</h4></li></dir></br>
+<dir><li><h6>Zapato : {{dato.tipo}} {{dato.marca}}</h6></li></dir></br>
+<dir><li><h6>Descripción : {{dato.descripcion}}</h6></li></dir></br>
+<dir><li><h6>Genero : {{dato.genero}}</h6></li></dir></br>
+<dir><li><h6>Marca : {{dato.marca}}</h6></li></dir></br>
 
 
 <dir><img src='{{MEDIA_URL}}{{dato.imagen}}'></dir></br></br>
 	{% for item in datos_zapato %}
-		<dir><li><h4>Serie del {{item.minymax}}, PVP :{{item.pvp}} €</h4></li></dir></br>
+		<dir><li><h6>Serie del {{item.minymax}}, PVP : {{item.pvp}} €</h6></li></dir></br>
 	{% endfor %}
    </ul></div>
 </center>

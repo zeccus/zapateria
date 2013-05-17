@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from util import decoradores
 
 def lista_zapatos(request):
-    zapatos = Zapato.objects.all()
+    zapatos = Zapato.objects.all().order_by('tipo')
     series = Series.objects.all()
     context_instance=RequestContext(request)
     return render_to_response('inicio.html',{'lista':zapatos,'series':series},context_instance)
@@ -39,7 +39,7 @@ def zapato_unisex(request):
 	return render_to_response('unisex.html',{'uni':uni},context_instance)
 	
 def marca(request):
-	marca = Marca.objects.all()
+	marca = Marca.objects.all().order_by('nombre')
 	context_instance = RequestContext(request)
 	return render_to_response('marcas.html',{'marca':marca},context_instance)
 
@@ -50,12 +50,18 @@ def zapato_marca(request, id_marca):
 	return render_to_response('producto_marca.html',{'dato':dato, 'zapato':zapato},context_instance)
 
 def tipo(request):
-	tipo = Tipo.objects.all()
+	dato = Tipo.objects.all().order_by('tipo')
 	context_instance = RequestContext(request)
-	return render_to_response('tipo.html',{'tipo':tipo},context_instance)
+	return render_to_response('tipo.html',{'dato':dato},context_instance)
 
 def tipo_zapato (request, id_tipo):
 	dato = get_object_or_404(Tipo, pk=id_tipo)
 	zapato = Zapato.objects.filter (tipo = dato)
 	context_instance = RequestContext(request)
 	return render_to_response('productos_tipo.html',{'dato':dato,'zapato':zapato},context_instance)
+
+def tienda (request):
+	dato = Almacen.objects.all()
+	empleados = Empleados.objects.all()
+	context_instance = RequestContext(request)
+	return render_to_response('contacto.html',{'dato':dato,'empleados':empleados},context_instance)

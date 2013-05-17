@@ -10,19 +10,19 @@
 
 {% block contenido %}
 <br><br><br>
-{% for elemento in tipo %}
+{% for elemento in dato %}
 
 <content>
 <div class=listado><center>
 <ul = class= boxProducto><br>
-	<dir><li><a href="{% url 'principal_tipos' elemento.id %}">{{elemento.tipo}} </a></li></dir></br>
+	<dir><li><h4><a href="{% url 'principal_tipos' elemento.id %}">{{elemento.tipo}} </a></h4></li></dir></br>
 <dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
 </ul></center>
 </div>
 </content>
 
-{% endfor %}<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endfor %}<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer>
 		<div id="bop">
   			<div id="footer">
