@@ -13,14 +13,13 @@
 <nav>
 <center>
 <div class=listado>
-<ul><br><br><br><br>
+<ul><br><br><br><br><br><br>
 <dir><li><h6>Zapato : {{dato.tipo}} {{dato.marca}}</h6></li></dir></br>
 <dir><li><h6>Descripción : {{dato.descripcion}}</h6></li></dir></br>
 <dir><li><h6>Genero : {{dato.genero}}</h6></li></dir></br>
 <dir><li><h6>Marca : {{dato.marca}}</h6></li></dir></br>
-
-
 <dir><img src='{{MEDIA_URL}}{{dato.imagen}}'></dir></br></br>
+
 	{% for item in datos_zapato %}
 		<dir><li><h6>Serie del {{item.minymax}}, PVP : {{item.pvp}} €</h6></li></dir></br>
 	{% endfor %}

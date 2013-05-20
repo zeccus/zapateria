@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from util import decoradores
 
 def lista_zapatos(request):
-    zapatos = Zapato.objects.all()
+    zapatos = Zapato.objects.all().order_by('tipo')
     series = Series.objects.all()
     context_instance=RequestContext(request)
     return render_to_response('inicio.html',{'lista':zapatos,'series':series},context_instance)

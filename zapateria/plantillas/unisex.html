@@ -8,11 +8,11 @@
 
 {% endblock %}
 
-{% block contenido %}</br></br></br>
+{% block contenido %}</br><br><br><br>
 <center>
 <a class="boton" href="{% url 'ninos'%}" > Niños</a>   
 <a class="boton" href="{% url 'ninas'%}"> Niñas</a>  
-</center>  </br></br></br>
+</center>  </br><br><br><br>
 {% for elemento in uni %}
 <content>
 <div class=listado><center>
@@ -22,5 +22,5 @@
 </ul></div>
 </center>
 </content>
-{% endfor %}
+{% endfor %}<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 {% endblock %}

@@ -15,7 +15,7 @@ background-image: -ms-linear-gradient(left bottom, rgb(32,122,32) 12%, rgb(179,1
 input, textarea, select { font-family: Arial, sans-serif; font-size:12px; color:#333; }
 textarea { overflow:auto;}
 
-a img { border:0; }
+a img { border:0; width: 90px; height: 90px; }
 
 a { color:#000; text-decoration: none; cursor:pointer; }
 a:hover { color:#A10707; }
