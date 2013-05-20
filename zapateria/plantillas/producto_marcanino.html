@@ -9,25 +9,30 @@
 {% endblock %}
 
 {% block contenido %}
-<br><br><br><br><center>
-<a class="boton" href="{% url 'ninotipo' dato.id%}" > Niños</a>   
-<a class="boton" href="{% url 'ninatipo' dato.id%}"> Niñas</a>  
-<a class="boton" href="{% url 'unitipo' dato.id%}"> Unisex</a></center> <br><br><br><br>
-{% for elemento in zapato %} 
+<br><br><br>
+<a class="boton" href="{% url 'ninomarca' dato.id%}" > Niños</a>   
+<a class="boton" href="{% url 'ninamarca' dato.id%}"> Niñas</a>  
+<a class="boton" href="{% url 'unimarca' dato.id%}"> Unisex</a></center> 
+{{dato.id}}
+<br><br><br>
+{% for elemento in zapato %}
+
 <content>
 <div class=listado><center>
 <ul = class= boxProducto><br>
-	<dir><li><h4><a href="{% url 'principal_productos' elemento.id %}"> {{dato.tipo}} {{elemento.marca}} </a></h4></li></dir></br>
+
+<dir><li><h4><a href="{% url 'principal_productos' elemento.id %}"> {{elemento.tipo}} {{elemento.marca}} </a></h4></li></dir></br>
 <dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
+
 </ul></div>
 </center>
 </content>
 
 {% endfor %}
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <footer>
 
-<div id="bop">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <footer>
+		<div id="bop">
   			<div id="footer">
 				<div class="left"><br>
 					<a href="/">Inicio</a>
@@ -44,8 +49,7 @@
 			</div>
 				<!-- End Footer -->
 			
-		</div>	
-			
+		</div>			
   </footer>
-{% endblock %}
 
+{% endblock %}
