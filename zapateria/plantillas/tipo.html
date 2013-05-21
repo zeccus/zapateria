@@ -13,35 +13,14 @@
 {% for elemento in dato %}
 
 <content>
-<div class=listado><center>
-<ul = class= boxProducto><br>
-	<dir><li><h4><a href="{% url 'principal_tipos' elemento.id %}">{{elemento.tipo}} </a></h4></li></dir></br>
+<div class=listado><center><a href="{% url 'principal_tipos' elemento.id %}">
+<ul = class= boxProducto>
+	<dir><li><h4>{{elemento.tipo}}</h4></li></dir>
 <dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
-</ul></center>
+</ul> </a></center>
 </div>
 </content>
 
-{% endfor %}<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <footer>
-		<div id="bop">
-  			<div id="footer">
-				<div class="left"><br>
-					<a href="/">Inicio</a>
-						<span>|</span>
-					<a href="/proovedores">Proovedores</a>
-						<span>|</span>
-					<a href="/marcas">Marcas</a>
-						<span>|</span>
-					<a href="/sobre">Sobre Garabatos</a>
-						<span>|</span>
-					<a href="/contacto">Contáctanos!</a>
-				</div>
-					
-			</div>
-				<!-- End Footer -->
-			
-		</div>			
-  </footer>
+{% endfor %}
 
 {% endblock %}

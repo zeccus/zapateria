@@ -12,36 +12,15 @@
 
 
 {% for elemento in proovedores %}
-<nav><h5><ul><center></br></br></br></br></br></br>
+<article><h5><ul><center></br></br></br></br></br></br>
 
 <li>Nif Empresa: {{elemento.NifDNI}}</li></br>
 <li>Nombre Proovedor : {{elemento.nombre}}</li></br>
 <li>Direccion : {{elemento.direccion}}</li></br>
 <li>Telefono: {{elemento.telf}}</li></br>
 <li>Telefono Viajante : {{elemento.telf_viajante}}</li></center>
-</ul></h5></nav></br>
+</ul></h5></article></br>
 {% endfor %}
 
 
-  <footer>
-
-  	<div id="bop">
-  			<div id="footer">
-				<div class="left"><br>
-					<a href="/">Inicio</a>
-						<span>|</span>
-					<a href="/proovedores">Proovedores</a>
-						<span>|</span>
-					<a href="/marcas">Marcas</a>
-						<span>|</span>
-					<a href="/sobre">Sobre Garabatos</a>
-						<span>|</span>
-					<a href="/contacto">Contáctanos!</a>
-				</div>
-					
-			</div>
-				<!-- End Footer -->
-	</div>			
-			
-  </footer>
 {% endblock %}

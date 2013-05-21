@@ -19,36 +19,21 @@
 
 
 {% for elemento in lista %} 
-
-
+<content>
 	<div class=listado><center>
-		<ul = class= boxProducto><br>
-			<dir><li><h4><a href="{% url 'principal_productos' elemento.id %}"> {{elemento.tipo}} {{elemento.marca}} </a></h4></li></dir></br>
+		<a href="{% url 'principal_productos' elemento.id %}"><ul = class= boxProducto><br>
+			<dir><li><h4>{{elemento.tipo}} {{elemento.marca}}</h4></li></dir>
 			<dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
-		</ul></div>
+		</ul></a>
 	</center>
+	</div>
+</content>
+
 
 
 {% endfor %}
-{% endblock %}{% block pie %}<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<div id="bop">
-  			<div id="footer">
-  				<div class="left"><br>	
-					<div id="navigation">
-						<a href="/">Inicio</a>
-							<span>|</span>
-						<a href="/proovedores">Proovedores</a>
-							<span>|</span>
-						<a href="/marcas">Marcas</a>
-							<span>|</span>
-						<a href="/sobre">Sobre Garabatos</a>
-							<span>|</span>
-						<a href="/contacto">Contáctanos!</a>
-					</div>
-				</div>	
-			</div>				
-		</div>			
+{% endblock %}{% block pie %}
+	
   </footer>
 
 {% endblock %}
