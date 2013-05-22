@@ -9,9 +9,8 @@
 {% endblock %}
 
 {% block contenido %}
-<br><br><br>
-{% for elemento in dato %}
 
+{% for elemento in dato %}
 <content>
 <div class=listado><center><a href="{% url 'principal_tipos' elemento.id %}">
 <ul = class= boxProducto>
@@ -20,6 +19,9 @@
 </ul> </a></center>
 </div>
 </content>
+
+
+
 
 {% endfor %}
 

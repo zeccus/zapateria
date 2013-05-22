@@ -19,7 +19,8 @@
 <dir><li><h4>Descripción : {{dato.descripcion}}</h4></li></dir>
 <dir><li><h4>Genero : {{dato.genero}}</h4></li></dir>
 <dir><li><h4>Marca : {{dato.marca}}</h4></li></dir>
-<dir><img src='{{MEDIA_URL}}{{dato.imagen}}'></dir>
+<dir><a class="thumbnail" href="#thumb"><img src='{{MEDIA_URL}}{{dato.imagen}}' />
+<span><img src='{{MEDIA_URL}}{{dato.imagen}}'width="600px" height="580px" border="0"/><br />Calzados Garabatos</span></a></dir>
 
 	{% for item in datos_zapato %}
 		<dir><li><h4>Serie del {{item.minymax}}, PVP : {{item.pvp}} €</h4></li></dir>

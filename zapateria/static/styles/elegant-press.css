@@ -144,8 +144,7 @@ h4 { font-size:18px; line-height:18px; color:#000; font-weight:bold; font-family
 h6 { font-size:22px; line-height:18px; color:#000; font-weight:bold; font-family: 'Cabin Sketch',cursive;} 
 h1 { font-size:18px; line-height:18px; color:#000; font-weight:bold; font-family: 'Cabin Sketch'} 
 
-elemento {z-index:100; margin:19px 0px 0 0px; height:571px; overflow:hidden; padding:0px; text-align: center;
-}
+
 
 .listado .boxProducto.finFila {
     background: none repeat scroll 0% 0% transparent;
@@ -229,3 +228,21 @@ padding-left:5px; /* espacio entre la 1° y la 2° parte del título */
 color:#0B610B;
 padding-left:5px;
 }
+
+.thumbnail {position: relative; z-index: 100; }
+.thumbnail:hover{ background-color: transparent; z-index: 100; }
+.thumbnail span{ 
+position: absolute;
+background-color: black;
+padding: 0px;
+left: -100px;
+border: 5px double gray;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+visibility: hidden;
+color: #ffffff;
+text-decoration: none;
+}
+
+.thumbnail span img{ border-width: 0; padding: 2px;width:300px;height:260px ;}
+.thumbnail:hover span{ visibility: visible; top: 0; left: 10px; }

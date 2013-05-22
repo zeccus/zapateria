@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %}{% endblock %}
+
+{% block encabezado %} 
+
+{% endblock %}
+
+{% block contenido %}
+
+
+
+<div class="box">
+           <div class="content">
+        <h5>Calzados Garabatos</h5>
+        <img class="imgr" src="{{STATIC_URL}}images/garabatos.png" alt="" width="150" height="150" />
+        <p><div><div class="date"><span class="day">21</span> <span class="month">May</span> <span class="year">2013</span></div>
+
+</div>
+    <p>Calzados Garabatos es una empresa familiar fundada en 1987, una referencia en el sector del calzado infantil y juvenil en granada, donde a través de la experiencia y los años nos emos convertido en un claro referente dentro del mundo del calzado.</p>
+
+        <p>En Calzados Garabatos siempre buscamos los mejores fabricantes dentro y fuera de España, luchando por mantener nuestro compromiso de productos de alta calidad y diseño, que puedan mantener satisfechos a todos nuestros clientes,</p><span class='rojo'> productos que ayuden al buen desarrollo de los pies de sus hijos<span><p>,siguiendo siempre las últimas tendencias de moda, conjugando la modernidad y la tradiccion</p>
+    <br/>
+<br/>
+ <h5>Sobre el Calzado</h5>
+        
+        <p><div><div class="date"><span class="day">19</span> <span class="month">May</span> <span class="year">2013</span></div>
+
+</div>
+    <p>Elegir un buen calzado para nuestros hijos es siempre de gran importancia, pues debemos tomarnoslo como un factor muy importante para el perfecto desarrollo del bebe, la misión del calzado para los primeros pasos de un bebe es esencial, respetando la fisonomía del cuerpo evitariamos posibles problemas de espaldas y al andar, sobre todo si ya existen patologías para tener que aplicar un calzado correctivo</p>
+  <img class="imgl" src="{{STATIC_URL}}images/bebe.jpeg" alt="" width="150" height="150" />
+        <p>Un zapato debe ser siempre flexible, pudiendo doblar la suela facilmente con la mano; el tamaño debe ser lo bastante aancho y largo para que permita el movimiento de los dedos y estos no lleguen al final del zapato, dejando aproximadamente 1 cm de espacio; los materiales deben ser naturales y de calidad para que permitan una mejor transpiracion de la piel; es necesario tambien elegir el modelo que mejor se adapte al pie, que lleve una buena sujeción tanto de cordones, velcro o hebilla, como de talón.</p><p> Ha pesar de todo esto y aun eligiendo el mejor calzado posible no debe olvidar que los zapatos, en especial las deportivas son sólo para algunas horas al día, se debe intentar siempre tener en casa zapatos todabía mas cómodos, como zapatillas de casa.</p>
+
+  <h5>Deja tú Comentario</h5>
+        <div id="respond">
+          <form action="#" method="post">
+            <p>
+              <input type="text" name="name" id="name" value="" size="22" />
+              <label for="name"><small>Nombre (requerido)</small></label>
+            </p>
+            <p>
+              <input type="text" name="email" id="email" value="" size="22" />
+              <label for="email"><small>E-Mail (requerido)</small></label>
+            </p>
+            <p>
+              <textarea name="comment" id="comment" rows="10"></textarea>
+              <label for="comment" style="display:none;"><small>Comentario (requerido)</small></label>
+            </p>
+            <p>
+              <input name="submit" type="submit" id="submit" value="Enviar Formulario" />
+              &nbsp;
+              <input name="reset" type="reset" id="reset" tabindex="5" value="Limpiar Formulario" />
+            </p>
+          </form>
+        </div>
+
+      </div>
+      
+     <div class="sidebar">
+       <div class="subnav">
+          <h5>Menú</h5>
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/tipo">Productos</a>
+            <li><a href="/marcas">Marcas</a>
+            <li><a href="/proovedores">Proovedores</a>
+            <li><a href="/garabatos">Sobre...</a></li>
+                  <ul>
+                    <li><a href="/garabatos">Garabatos</a></li>
+                    <li><a href="/contacto">Contactar</a></li>
+                  </ul>
+            </li>
+          </ul>
+        </div>
+
+      
+      </div>
+
+      
+      
+      <div class="clear"></div>
+    </div>
+    {% endblock %}

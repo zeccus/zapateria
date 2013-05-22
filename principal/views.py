@@ -101,3 +101,9 @@ def zapato_tipouni(request, id_tipo):
 	zapato = Zapato.objects.filter(tipo = dato, genero = 3)
 	context_instance = RequestContext(request)
 	return render_to_response('productos_tipouni.html',{'dato':dato, 'zapato':zapato},context_instance)
+
+def garabatos(request):
+	dato = Almacen.objects.all()
+	empleados = Empleados.objects.all()
+	context_instance = RequestContext(request)
+	return render_to_response('garabatos.html',{'dato':dato,'empleados':empleados},context_instance)
