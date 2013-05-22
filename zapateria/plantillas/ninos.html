@@ -8,11 +8,11 @@
 
 {% endblock %}
 
-{% block contenido %}</br></br>
+{% block contenido %} 
 <center>
 
 <a class="boton" href="{% url 'ninas'%}"> Niñas</a>  
-<a class="boton" href="{% url 'uni'%}" > Unisex</a></center>  </br></br>
+<a class="boton" href="{% url 'uni'%}" > Unisex</a></center>  </br></br><br>
 {% for elemento in nino %}
 <content>
 <div class=listado><center><a href="{% url 'principal_productos' elemento.id %}">

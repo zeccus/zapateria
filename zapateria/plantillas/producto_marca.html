@@ -9,12 +9,12 @@
 {% endblock %}
 
 {% block contenido %}
-<br><br><center>
+<center>
 <a class="boton" href="{% url 'ninomarca' dato.id%}" > Niños</a>   
 <a class="boton" href="{% url 'ninamarca' dato.id%}"> Niñas</a>  
 <a class="boton" href="{% url 'unimarca' dato.id%}"> Unisex</a></center> 
 
-<br><br>
+<br><br><br>
 {% for elemento in zapato %}
 
 <content>
