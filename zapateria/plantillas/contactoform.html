@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {% block contenido %}
-<div class="box"><center>
+<div class="box"><center><p><b>Envia un Correo a Calzados Garabatos y ponte en contácto con nosotros</b></p></center></br></br><center>
 	<form id='formulario' method='post' action=''>{% csrf_token %}{{formulario.as_p}}
 	<p><input type='submit' value='Confirmar' /></p>
 	</form></center>

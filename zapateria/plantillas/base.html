@@ -34,17 +34,27 @@ img { width:200px;}
    <nav> 
     <ul class="nav">
       <li class="active">
-      <li><a href="/">Inicio</a></li>
+      <li><a href="/tipo">Inicio</a></li>
       <span class='rojo'><li>|<li></span>
-      <li><a href="/tipo">Productos</a></li>
+      <li><a href="/tipo">Productos</a>
+        <ul>
+            <li><a href="/">Listado de Productos</a></li>
+            <li><a href="/productos/nuevo">Nuevo</a></li>
+        </ul>
+      </li>
       <span class='rojo'><li>|<li></span>
-      <li><a href="/marcas">Marcas</a></li>
+      <li><a href="/marcas">Marcas</a>
+          <ul>
+            <li><a href="/marcas">Productos por Marca</a></li>
+            <li><a href="/marcas/nuevo">Añadir Marca</a></li>
+          </ul>
+      </li>
       <span class='rojo'><li>|<li></span>
       <li><a href="/proovedores">Proovedores</a></li>
       <span class='rojo'><li>|<li></span>
       <li class="last"> <a href="/sobregarabatos">Garabatos</a>
         <ul>
-          <li><a href="/sobregarabatos">Sobre nosotros</a>
+          <li><a href="/sobregarabatos">Sobre nosotros</a></li>
           <li><a href="/contacto">Donde encontrarnos</a></li>
           <li><a href="/contactoform">Contácta por E-Mail</a></li>
         </ul>

@@ -1,5 +1,5 @@
 from principal.models import Empleados,Almacen,Zapato,Series,Genero,Color,Marca,Persona,Cabecera,Detalle,Tipo
-from principal.forms import ContactoForm
+from principal.forms import ContactoForm,ZapatoForm,MarcaForm
 from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
@@ -122,3 +122,23 @@ def contacto(request):
 	else:
 		formulario = ContactoForm()
 	return render_to_response('contactoform.html',{'formulario':formulario},context_instance = RequestContext(request))
+
+def nuevo_zapato(request):
+	if request.method =='POST':
+		formulario = ZapatoForm(request.POST, request.FILES)
+		if formulario.is_valid():
+			formulario.save()
+			return HttpResponseRedirect('/')
+	else:
+		formulario = ZapatoForm()
+	return render_to_response('Zapatoform.html',{'formulario':formulario},context_instance=RequestContext(request))
+
+def nueva_marca(request):
+	if request.method =='POST':
+		formulario = MarcaForm(request.POST, request.FILES)
+		if formulario.is_valid():
+			formulario.save()
+			return HttpResponseRedirect('/')
+	else:
+		formulario = MarcaForm()
+	return render_to_response('Marcaform.html',{'formulario':formulario},context_instance=RequestContext(request))
