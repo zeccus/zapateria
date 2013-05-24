@@ -160,3 +160,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'calzadosgarabatos33@gmail.com'
 EMAIL_HOST_PASSWORD = 'garabatosbaratos'
 EMAIL_PORT = 587
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
