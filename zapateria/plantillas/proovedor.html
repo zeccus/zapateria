@@ -12,11 +12,11 @@
 
 {% for elemento in proovedores %}
 <div class= box><center>
-<h5><ul>
+<h4><ul>
 <li><a href="{% url 'lista_proovedores' elemento.id %}">{{elemento.nombre}}</li>
 
 </ul>
-</h5></center>
+</h4></center>
 </div>
 {% endfor %}
 

@@ -19,7 +19,7 @@ class Zapato(models.Model):
     genero = models.ForeignKey("Genero")
     marca = models.ForeignKey("Marca")
     tipo = models.ForeignKey("Tipo")
-    descripcion = models.TextField(help_text="descripcion del zapato")
+    descripcion = models.TextField()
     imagen = models.ImageField(upload_to = 'zapateria/media/')
     def __unicode__(self):
         return unicode(self.tipo)

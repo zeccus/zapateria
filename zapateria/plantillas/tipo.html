@@ -6,46 +6,19 @@
 
 {% block encabezado %} 
 
-<div class="main-container">
-  <div class="container1">
-    <div id="jFlowSlider" >
-      <div  id="mySlides" >
-        <div  id="slide1">    
-          <img src="{{STATIC_URL}}images/slider1.jpg" alt="Slide 1 jFlow Plus" />
-       
-	      </div>    	
-        <div id="slide2">
-        <img src="{{STATIC_URL}}images/slider2.jpg" alt="Slide 2 jFlow Plus" />
-        
-        </div>   
-	      <div id="slide3">
-        <img src="{{STATIC_URL}}images/slider3.jpg" alt="Slide 3 jFlow Plus" />
-        </div>
-     </div>
-    </div>
-      <div id="myController">
-        <span class="jFlowControl"></span>
-        <span class="jFlowControl"></span>
-        <span class="jFlowControl"></span>
-      </div>
-
-      <section class="jFlowPrev"><div></div></section>
-      <section class="jFlowNext"><div></div></section>
-  </div>
-</div>
 {% endblock %}
 
 {% block contenido %}
 
-<center><h5><b>Tipo De Zapatos</b></h5></center></br></br>
 {% for elemento in dato %}
 <content>
+	<div id='hola'>
 <div class=listado><center><a href="{% url 'principal_tipos' elemento.id %}">
 <ul = class= boxProducto>
 	<dir><li><h4>{{elemento.tipo}}</h4></li></dir>
 <dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
 </ul> </a></center>
-</div>
+</div></div>
 </content>
 
 

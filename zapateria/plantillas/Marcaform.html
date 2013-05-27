@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block contenido %}
 	<div class="box"><center><p><b>Todos Los Campos Son Obligatorios</b></p></center></br></br>
-		<form id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %} {{formulario.as_p}}</br>
+		<center><form id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %} {{formulario.as_p}}</br></center>
 		<center>	<p><input type='submit' value='Insertar'/></p></center>
 		</form>
 	</div>
