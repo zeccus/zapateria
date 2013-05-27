@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% comment %} Aqui van comentarios {% endcomment %}
+{% comment %} listado de Tipos{% endcomment %}
 
 {% block titulo %} Inicio {% endblock %}
 
@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block contenido %}
-
+<center><h5><b>Tipo De Zapatos</b></h5></center></br></br>
 {% for elemento in dato %}
 <content>
 <div class=listado><center><a href="{% url 'principal_tipos' elemento.id %}">
