@@ -73,9 +73,9 @@ background-image: -ms-linear-gradient(left bottom, rgb(206,245,133) 15%, rgb(131
      	 	 #breadcrumb ul li.current a{text-decoration:underline}
      	 	 .container{border-top:1px solid #666;border-bottom:1px solid #666;padding:30px 0}
      	 	 .container1{padding:30px 0}
-     	 	 .box{background-color:#FFF;border:1px solid #666;-webkit-border-radius:5px;-moz-border-radius:5px;
+     	 	 .box{background: #eee url(../images/bg.png);border:1px solid #666;-webkit-border-radius:5px;-moz-border-radius:5px;
      	 	 	border-radius:5px;-webkit-box-shadow:5px 5px 5px #ccc;-moz-box-shadow:5px 5px 5px #ccc;
-     	 	 	box-shadow:5px 5px 5px #ccc;padding:29px}.content{display:block;float:left;width:600px}
+     	 	 	box-shadow:5px 5px 5px #ccc;padding:10px}.content{display:block;float:left;width:600px}
      	 	 	#comments{margin-bottom:40px}
      	 	 	#comments .commentlist li.comment_odd,#comments .commentlist li.comment_even{list-style:none;
      	 	 		margin:0 0 10px;padding:15px}#comments .commentlist li.comment_odd{color:#666;background-color:#F7F7F7}

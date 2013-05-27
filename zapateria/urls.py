@@ -6,8 +6,10 @@ from django.conf.urls.static import static
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$','principal.views.tipo'),
+    url(r'^$','principal.views.index'),
+    url(r'^tipo/$','principal.views.tipo'),
     url(r'^proovedores/$','principal.views.lista_proovedores'),
+    url(r'^proovedores/lista/(?P<id_proovedor>\d+)$','principal.views.proovedores', name='lista_proovedores'),
     url(r'^producto/(?P<id_zapato>\d+)$','principal.views.zapato_especifico',name = 'principal_productos'),
     url(r'^ninos/$','principal.views.zapato_nino', name = 'ninos'),
     url(r'^ninas/$','principal.views.zapato_nina',name = 'ninas'),

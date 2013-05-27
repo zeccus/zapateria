@@ -8,7 +8,40 @@
 
 {% endblock %}
 
-{% block contenido %}<body><div class="box">
+{% block contenido %}
+<body>
+<div class="box">
+	<div class="sidebar">
+       <div class="subnav">
+          <h5>Menú</h5>
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/">Productos</a>
+                  <ul>
+                    <li><a href="/lista">Listado</a></li>
+                    <li><a href="/marcas">Catálogo por Marcas</a></li>
+                    <li><a href="/tipo">Catálogo por Tipo</a></li>
+                  </ul>
+
+            <li><a href="/marcas">Añadir</a>
+                <ul>
+                     <li><a href="/productos/nuevo">Producto</a></li>
+                    <li><a href="/marcas/nuevo">Marca</a></li>
+                </ul>
+        
+            <li><a href="/proovedores">Listado de Proovedores</a>
+            <li><a href="/sobregarabatos">Sobre...</a></li>
+                  <ul>
+                    <li><a href="/sobregarabatos">Garabatos</a></li>
+                    <li><a href="/contacto">Donde encontrarnos</a></li>
+                    <li><a href="/contacto">Contacta por E-Mail</a></li>
+                  </ul>
+            </li>
+          </ul>
+        </div>
+
+      
+      </div>
 <div id="left">
  <style>
 #tbisose{list-style:none; text-decoration:none; font-size:0.9em; font-family:trebuchet ms,sans-serif;}

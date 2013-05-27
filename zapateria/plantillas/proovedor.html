@@ -10,16 +10,14 @@
 
 {% block contenido %}
 
-
 {% for elemento in proovedores %}
-<article><h5><ul><center></br></br></br></br></br></br>
+<div class= box><center>
+<h5><ul>
+<li><a href="{% url 'lista_proovedores' elemento.id %}">{{elemento.nombre}}</li>
 
-<li>Nif Empresa: {{elemento.NifDNI}}</li></br>
-<li>Nombre Proovedor : {{elemento.nombre}}</li></br>
-<li>Direccion : {{elemento.direccion}}</li></br>
-<li>Telefono: {{elemento.telf}}</li></br>
-<li>Telefono Viajante : {{elemento.telf_viajante}}</li></center>
-</ul></h5></article></br>
+</ul>
+</h5></center>
+</div>
 {% endfor %}
 
 

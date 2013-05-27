@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %}{% endblock %}
+
+{% block encabezado %} 
+
+{% endblock %}
+
+{% block contenido %}
+
+
+
+<article><h5><ul><center></br></br></br></br></br></br>
+{%for elemento in proovedores%}
+<li>Nif Empresa: {{elemento.NifDNI}}</li></br>
+<li>Nombre Proovedor : {{elemento.nombre}}</li></br>
+<li>Direccion : {{elemento.direccion}}</li></br>
+<li>Telefono: {{elemento.telf}}</li></br>
+<li>Telefono Viajante : {{elemento.telf_viajante}}</li></center>
+</ul></h5></article></br>
+{% endfor %}
+
+
+{% endblock %}

@@ -7,14 +7,18 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.core.mail import EmailMessage
 from util import decoradores
 
+def index(request):
+	context_instance = RequestContext(request)
+	return render_to_response('index.html',context_instance)
+	
 def lista_zapatos(request):
     zapatos = Zapato.objects.all().order_by('tipo')
     series = Series.objects.all()
     context_instance=RequestContext(request)
-    return render_to_response('inicio.html',{'lista':zapatos,'series':series},context_instance)
+    return render_to_response('listado.html',{'lista':zapatos,'series':series},context_instance)
 
 def lista_proovedores(request):
-    proovedores = Persona.objects.filter(proovedor = True).values()
+    proovedores = Persona.objects.filter(proovedor = True).order_by('nombre').values()
     context_instance=RequestContext(request)
     return render_to_response('proovedor.html',{'proovedores': proovedores},context_instance)
 
@@ -108,6 +112,12 @@ def zapato_tipouni(request, id_tipo):
 	zapato = Zapato.objects.filter(tipo = dato, genero = 3)
 	context_instance = RequestContext(request)
 	return render_to_response('productos_tipouni.html',{'dato':dato, 'zapato':zapato},context_instance)
+
+def proovedores(request,id_proovedor):
+	dato = get_object_or_404(Persona, pk=id_proovedor)
+	proovedores = Persona.objects.filter(nombre = dato).values()
+	context_instance = RequestContext(request)
+	return render_to_response('proovedorlista.html',{'proovedores':proovedores},context_instance)
 
 def contacto(request):
 	if request.method=='POST' :
