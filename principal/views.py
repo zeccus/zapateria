@@ -152,3 +152,14 @@ def nueva_marca(request):
 	else:
 		formulario = MarcaForm()
 	return render_to_response('Marcaform.html',{'formulario':formulario},context_instance=RequestContext(request))
+
+def nueva_persona(request):
+	if request.method =='POST':
+		formulario = PersonaForm(request.POST, request.FILES)
+		if formulario.is_valid():
+			formulario.save()
+			return HttpResponseRedirect('/')
+	else:
+		formulario = PersonaForm()
+	return render_to_response('Personaform.html',{'formulario':formulario},context_instance=RequestContext(request))
+

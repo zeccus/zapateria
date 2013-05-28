@@ -14,3 +14,4 @@ class ZapatoForm(ModelForm):
 class MarcaForm(ModelForm):
 	class Meta:
 		model = Marca
+
