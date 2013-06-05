@@ -9,7 +9,13 @@
 {% endblock %}
 
 {% block contenido %}
-
+<script>
+function scrollWindow()
+{
+window.scrollTo(200,350);
+}
+</script>
+<body onload="scrollWindow();"></>
 {% for elemento in proovedores %}
 <div class= box><center>
 <h4><ul>

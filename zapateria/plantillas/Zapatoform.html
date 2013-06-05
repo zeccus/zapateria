@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 {% block encabezado %}
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script>$("div.hola").scrollTop(300);</script>
+
 {% endblock%}
 {% block contenido %}
-	<div class="box"; id='hola'><center><p><b>Todos Los Campos Son Obligatorios</b></p></center></br>
+<script>
+function scrollWindow()
+{
+window.scrollTo(200,350);
+}
+</script>
+<body onload="scrollWindow();"></>
+	<div class="box";><center><p><b>Todos Los Campos Son Obligatorios</b></p></center></br>
 		<center><form id='formulario' method='post' enctype='multipart/form-data' action=''>{% csrf_token %} {{formulario.as_p}}</center></br>
 			<center><p><input type='submit' value='Insertar'/></p></center>
 		</form>

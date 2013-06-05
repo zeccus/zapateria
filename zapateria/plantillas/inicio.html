@@ -9,7 +9,13 @@
 {% endblock %}
 
 {% block contenido %}
-
+<script>
+function scrollWindow()
+{
+window.scrollTo(200,350);
+}
+</script>
+<body onload="scrollWindow();"></>
 <center>
 <a class="boton" href="{% url 'ninos'%}"> Niños</a>   
 <a class="boton" href="{% url 'ninas'%}"> Niñas</a>  

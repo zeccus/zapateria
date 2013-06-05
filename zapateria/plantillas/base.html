@@ -13,12 +13,20 @@ img { width:200px;}
 
 <link rel="stylesheet" href="{{STATIC_URL}}styles/elegant-press.css" type="text/css" />
 <script src="{{STATIC_URL}}scripts/elegant-press.js" type="text/javascript"></script>
+
 <!--<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
 <!--[if IE]><style>#header h1 a:hover{font-size:75px;}</style><![endif]-->
 <!--http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js     necesary para ScrollTop()-->
+<script>
+function scrollWindow()
+{
+window.scrollTo(300,500);
+}
+</script>
 </head>
 <body>
+
 	<header>
  		<h2><a href="/sobregarabatos">Calzados <h1><span class='rojo'>Ga</span><span class='verde'>ra</span>ba<span class='rojo'>tos</span></a></h1></h2>
   	<iframe width="270" height="47" scrolling="no" src="http://pagina-del-dia.euroresidentes.es/gadget-dia-de-hoyH.php?png&texto=000000" frameborder="0"></iframe>
@@ -33,7 +41,7 @@ img { width:200px;}
       <span class='rojo'><li>|<li></span>
        <li><a href="/tipo">Catálogo</a>
         <ul>
-            <li><a href="/lista">Listado</a></li>
+            <li><a href="/lista" >Listado</a></li>
             <li><a href="/marcas">Catálogo por Marcas</a></li>
             <li><a href="/tipo">Catálogo por Tipos</a></li>
             

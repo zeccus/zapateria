@@ -10,7 +10,13 @@
 
 {% block contenido %}
 {%for elemento in marca%}
-
+<script>
+function scrollWindow()
+{
+window.scrollTo(200,350);
+}
+</script>
+<body onload="scrollWindow();"></>
 <content>
 <div class=listado><center>
 <a href="{% url 'principal_marcas' elemento.id %}"><ul = class= boxProducto>

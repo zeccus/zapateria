@@ -20,13 +20,13 @@ class Zapato(models.Model):
     marca = models.ForeignKey("Marca")
     tipo = models.ForeignKey("Tipo")
     descripcion = models.TextField()
-    imagen = models.ImageField(upload_to = 'zapateria/media/')
+    imagen = models.ImageField(upload_to = 'zapatos/')
     def __unicode__(self):
         return unicode(self.tipo)
 
 class Tipo(models.Model):
     tipo = models.TextField(verbose_name='tipo de zapato')
-    imagen = models.ImageField(upload_to = 'zapateria/media/')
+    imagen = models.ImageField(upload_to = 'tipo/')
     def __unicode__(self):
         return self.tipo
 
@@ -59,7 +59,7 @@ class Color(models.Model):
 class Marca(models.Model):
     persona = models.ForeignKey("Persona")
     nombre = models.TextField()
-    imagen = models.ImageField(upload_to = 'zapateria/media/')
+    imagen = models.ImageField(upload_to = 'marcas/')
     def __unicode__(self):
         return self.nombre
 

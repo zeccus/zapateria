@@ -6,19 +6,27 @@
 
 {% block encabezado %} 
 
+<script>
+function scrollWindow()
+{
+window.scrollTo(200,350);
+}
+</script>
+<body onload="scrollWindow();"></>
 {% endblock %}
 
 {% block contenido %}
 
 {% for elemento in dato %}
+
 <content>
-	<div id='hola'>
+
 <div class=listado><center><a href="{% url 'principal_tipos' elemento.id %}">
 <ul = class= boxProducto>
 	<dir><li><h4>{{elemento.tipo}}</h4></li></dir>
 <dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
 </ul> </a></center>
-</div></div>
+</div>
 </content>
 
 
