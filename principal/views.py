@@ -17,16 +17,16 @@ def lista_zapatos(request):
     context_instance=RequestContext(request)
     return render_to_response('listado.html',{'lista':zapatos,'series':series},context_instance)
 
-def lista_proovedores(request):
-    proovedores = Persona.objects.filter(proovedor = True).order_by('nombre').values()
-    context_instance=RequestContext(request)
-    return render_to_response('proovedor.html',{'proovedores': proovedores},context_instance)
-
 def zapato_especifico(request,id_zapato):
 	dato = get_object_or_404(Zapato, pk=id_zapato)
 	datos_zapato = Series.objects.filter(zapato = dato)
 	context_instance=RequestContext(request)
 	return render_to_response('producto.html',{'dato':dato,'datos_zapato':datos_zapato},context_instance)
+
+def lista_proovedores(request):
+    proovedores = Persona.objects.filter(proovedor = True).order_by('nombre').values()
+    context_instance=RequestContext(request)
+    return render_to_response('proovedor.html',{'proovedores': proovedores},context_instance)
 	
 def marca(request):
 	marca = Marca.objects.all().order_by('nombre')

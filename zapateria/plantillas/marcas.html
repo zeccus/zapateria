@@ -1,13 +1,9 @@
+
 {% extends 'base.html' %}
-
 {% comment %} Aqui van comentarios {% endcomment %}
-
 {% block titulo %} Inicio {% endblock %}
-
 {% block encabezado %} 
-
 {% endblock %}
-
 {% block contenido %}
 {%for elemento in marca%}
 <script>
@@ -19,15 +15,13 @@ window.scrollTo(200,350);
 <body onload="scrollWindow();"></>
 <content>
 <div class=listado><center>
-<a href="{% url 'principal_marcas' elemento.id %}"><ul = class= boxProducto>
+<a href="{% url 'principal_marcas' elemento.id %}"><ul class= boxProducto>
 	<dir><li><h4>{{elemento.nombre}} <h4></li></dir>
 <dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir>
 </ul></a></center>
 </div>
 </content>
-
-
-
 {% endfor %}
-
+{% endblock %}
+{% block pie %}
 {% endblock %}

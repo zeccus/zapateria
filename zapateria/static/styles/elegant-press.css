@@ -111,19 +111,15 @@ ul.nav li:hover li ul,ul.nav li.sfHover li ul,ul.nav li li:hover li ul,ul.nav li
 
 #toTop{display:none;text-decoration:none;position:fixed;bottom:10px;right:10px;overflow:hidden;width:51px;height:51px;border:none;text-indent:-999px;background:url(../images/ui.totop.png) no-repeat left top}#toTopHover{background:url(../images/ui.totop.png) no-repeat left -51px;width:51px;height:51px;display:block;overflow:hidden;float:left;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-ms-filter:alpha(opacity=0);opacity:0;filter:alpha(opacity=0)}#toTop:active,#toTop:focus{outline:none}
 
-
 img{width: 135px; height: 135px; border: 1px solid #000; border-radius: 26px}
 
 h5 { font-size:25px; line-height:28px; color:#000; font-weight:bold; font-family: 'Cabin Sketch',cursive;} 
 h4 { font-size:18px; line-height:18px; color:#000; font-weight:bold; font-family: 'Cabin Sketch',cursive;} 
 h6 { font-size:22px; line-height:18px; color:#000; font-weight:bold; font-family: 'Cabin Sketch',cursive;} 
 h1 { font-size:18px; line-height:18px; color:#000; font-weight:bold; font-family: 'Cabin Sketch'} 
-
-
-
+h2 { font-size:20px; line-height:20px; color:#000; font-weight:bold; font-family: 'Cabin Sketch',cursive}rsive}
 .listado .boxProducto.finFila {
     background: none repeat scroll 0% 0% transparent;
-
 }
 
 .listado .boxProducto {
@@ -146,8 +142,6 @@ h1 { font-size:18px; line-height:18px; color:#000; font-weight:bold; font-family
     }
 
 article{ z-index:100; background:url(../images/slider-bg.png) -24px 32px no-repeat; margin:19px 0px 0 0px; height:571px; overflow:hidden; padding:0px; text-align: center;}
-
-
 
 .boton {
    border-top: 1px solid #000000;
