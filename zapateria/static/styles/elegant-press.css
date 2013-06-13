@@ -118,6 +118,7 @@ h4 { font-size:18px; line-height:18px; color:#000; font-weight:bold; font-family
 h6 { font-size:22px; line-height:18px; color:#000; font-weight:bold; font-family: 'Cabin Sketch',cursive;} 
 h1 { font-size:18px; line-height:18px; color:#000; font-weight:bold; font-family: 'Cabin Sketch'} 
 h2 { font-size:20px; line-height:20px; color:#000; font-weight:bold; font-family: 'Cabin Sketch',cursive}rsive}
+
 .listado .boxProducto.finFila {
     background: none repeat scroll 0% 0% transparent;
 }
