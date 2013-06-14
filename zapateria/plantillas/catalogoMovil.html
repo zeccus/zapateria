@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<style>
+img { width:275px;}
+
+</style>
+<html lang='es'>
+<head>
+<link  href="{{STATIC_URL}}images/garabatos.png" rel="shortcut icon" type="image/x-icon" />
+      <h1><title>Calzados Garabatos</title></h1>
+<link rel="stylesheet" href="{{STATIC_URL}}styles/style.css" type="text/css" />
+<link rel="stylesheet" href="{{STATIC_URL}}styles/reset.css" type="text/css" />
+<script src="{{STATIC_URL}}scripts/scripts.js" type="text/javascript"></script></head> 
+
+
+
+<body>
+<div class="container darkbg clearfix">
+  <div id="headercont" class="clearfix">
+    <div id="headerlogo">
+      <h1><a title="" href="/movil">Calzados Garabatos</a></h1>
+    </div>
+    <div id="headerright">
+            <p><span>Calle Palencia nº4:</span> 958819105</p>
+            <p><span>Calle Doctor Creus nº10:</span> 958817969</p>
+            <p><span>Email:</span><a href="mailto:calzados_garabatos@gmail.com"> calzadosgarabatos@info.com</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="container lightbluebg clearfix">
+    <div id="menucont" class="clearfix">
+      <div class="menu">
+        <ul>
+          <li class="active">
+            <li><a href="/movil/catalogo">Catálogo</a></li>
+            <li><a href="/movil/contacto">Donde encontrarnos</a></li>
+            <li><a href="/movil/contactoforms">Contácta por E-Mail</a></li>
+          </li>
+        </ul>
+  </div>
+</div>    
+
+
+
+
+
+<div class="container clearfix">
+  <div id="maincont" class="clearfix">
+ 
+{% for elemento in dato %}
+    <div id="mainleft"><a href="{% url 'principal_tipos_movil' elemento.id %}">
+     <h1><dir>{{elemento.tipo}}</dir></h1>
+     <dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir></a>
+    </div>
+
+
+{% endfor %}
+</body>
+
+
+
+<footer>
+ <br class="clear" />
+<center>
+  <p class="tagline_left">Calzados Garabatos &copy;<br> Calle Doctor Creus, 4 <br> Calle Palencia, 10  <br>  18007 (Granada,Andalucia,España)  <br> </p>
+   
+      
+  </footer>
+    
+</html>

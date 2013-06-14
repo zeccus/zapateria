@@ -10,6 +10,10 @@ from util import decoradores
 def index(request):
 	context_instance = RequestContext(request)
 	return render_to_response('index.html',context_instance)
+
+def indexMovil(request):
+	context_instance = RequestContext(request)
+	return render_to_response('indexMovil.html',context_instance)
 	
 def lista_zapatos(request):
     zapatos = Zapato.objects.all().order_by('tipo')
@@ -22,6 +26,12 @@ def zapato_especifico(request,id_zapato):
 	datos_zapato = Series.objects.filter(zapato = dato)
 	context_instance=RequestContext(request)
 	return render_to_response('producto.html',{'dato':dato,'datos_zapato':datos_zapato},context_instance)
+
+def zapato_especifico_movil(request,id_zapato):
+	dato = get_object_or_404(Zapato, pk=id_zapato)
+	datos_zapato = Series.objects.filter(zapato = dato)
+	context_instance=RequestContext(request)
+	return render_to_response('producto_movil.html',{'dato':dato,'datos_zapato':datos_zapato},context_instance)
 
 def lista_proovedores(request):
     proovedores = Persona.objects.filter(proovedor = True).order_by('nombre').values()
@@ -44,17 +54,34 @@ def tipo(request):
 	context_instance = RequestContext(request)
 	return render_to_response('tipo.html',{'dato':dato},context_instance)
 
+def catalogoMovil(request):
+	dato = Tipo.objects.all().order_by('tipo')
+	context_instance = RequestContext(request)
+	return render_to_response('catalogoMovil.html',{'dato':dato},context_instance)
+
 def tipo_zapato (request, id_tipo):
 	dato = get_object_or_404(Tipo, pk=id_tipo)
 	zapato = Zapato.objects.filter (tipo = dato)
 	context_instance = RequestContext(request)
 	return render_to_response('productos_tipo.html',{'dato':dato,'zapato':zapato},context_instance)
 
+def tipo_zapato_movil (request, id_tipo):
+	dato = get_object_or_404(Tipo, pk=id_tipo)
+	zapato = Zapato.objects.filter (tipo = dato)
+	context_instance = RequestContext(request)
+	return render_to_response('productos_tipo_movil.html',{'dato':dato,'zapato':zapato},context_instance)
+
 def tienda (request):
 	dato = Almacen.objects.all()
 	empleados = Empleados.objects.all()
 	context_instance = RequestContext(request)
 	return render_to_response('contacto.html',{'dato':dato,'empleados':empleados},context_instance)
+
+def tiendaMovil (request):
+	dato = Almacen.objects.all()
+	empleados = Empleados.objects.all()
+	context_instance = RequestContext(request)
+	return render_to_response('tiendaMovil.html',{'dato':dato,'empleados':empleados},context_instance)
 
 def garabatos(request):
 	dato = Almacen.objects.all()
@@ -132,6 +159,20 @@ def contacto(request):
 	else:
 		formulario = ContactoForm()
 	return render_to_response('contactoform.html',{'formulario':formulario},context_instance = RequestContext(request))
+
+def contactoMovil(request):
+	if request.method=='POST' :
+		formulario = ContactoForm(request.POST)
+		if formulario.is_valid():
+			titulo = 'Mensaje desde Calzados Garabatos la web'
+			contenido = formulario.cleaned_data['mensaje']+ "\n"
+			contenido += 'Comunicarse a: ' + formulario.cleaned_data['correo']
+			correo = EmailMessage(titulo, contenido, to=['calzadosgarabatos33@gmail.com'])
+			correo.send()
+			return HttpResponseRedirect('/')
+	else:
+		formulario = ContactoForm()
+	return render_to_response('contactoMovil.html',{'formulario':formulario},context_instance = RequestContext(request))
 
 def nuevo_zapato(request):
 	if request.method =='POST':

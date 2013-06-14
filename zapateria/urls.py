@@ -7,6 +7,16 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$','principal.views.index'),
+
+    url(r'^movil/$','principal.views.indexMovil'),
+
+    url(r'^movil/catalogo/$','principal.views.catalogoMovil'),
+    url(r'^movil/contactoforms/$','principal.views.contactoMovil'),
+    url(r'^movil/contacto/$','principal.views.tiendaMovil'),
+    url(r'^movil/catalogo/tipo_zapato/(?P<id_tipo>\d+)$','principal.views.tipo_zapato_movil',name = 'principal_tipos_movil'),
+    url(r'^movil/catalogo/producto/(?P<id_zapato>\d+)$','principal.views.zapato_especifico_movil',name = 'principal_productos_movil'),
+
+
     url(r'^tipo/$','principal.views.tipo'),
     url(r'^proovedores/$','principal.views.lista_proovedores'),
     url(r'^proovedores/lista/(?P<id_proovedor>\d+)$','principal.views.proovedores', name='lista_proovedores'),
@@ -18,6 +28,7 @@ urlpatterns = patterns('',
     url(r'^marca_producto/(?P<id_marca>\d+)$','principal.views.zapato_marca',name = 'principal_marcas'),
     url(r'^lista/$','principal.views.lista_zapatos'),
     url(r'^tipo_zapato/(?P<id_tipo>\d+)$','principal.views.tipo_zapato',name = 'principal_tipos'),
+
     url(r'^marcas/nino/(?P<id_marca>\d+)$','principal.views.zapato_marcanino',name = 'ninomarca'),
     url(r'^marcas/nina/(?P<id_marca>\d+)$','principal.views.zapato_marcanina',name = 'ninamarca'),
     url(r'^marca/unisex/(?P<id_marca>\d+)$','principal.views.zapato_marcauni',name = 'unimarca'),
