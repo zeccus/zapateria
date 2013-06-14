@@ -23,7 +23,7 @@ body
 {
 	font-family: "Open Sans", Arial, Verdana, Helvetica, sans-serif;
 	font-size: 13px;
-	color: #555;
+	color: #000;
 	padding: 0 0 20px 0;
 	background: #FFF url("../images/bg.png") repeat;
 }
@@ -35,7 +35,7 @@ a { color: #00B2E0; text-decoration: none; -webkit-transition: all 0.2s linear; 
 a:hover { color: #222; }
 
 /** Layout Styles **/
-article{ z-index:100; background:url(../images/slider-bg.png) -24px 32px no-repeat; margin:19px 0px 0 0px; height:571px; overflow:hidden; padding:0px; text-align: center;}
+article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-repeat; margin:19px 0px 0 0px; height:571px; overflow:hidden; padding:0px; text-align: center;}
 .container
 {
 	width: 100%;
