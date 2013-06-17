@@ -5,7 +5,7 @@ from principal.models import Zapato, Marca, Persona
 
 class ContactoForm(forms.Form):
 	correo = forms.EmailField(label='Correo Electronico')
-	mensaje = forms.CharField(widget=forms.Textarea, label='')
+	mensaje = forms.CharField(widget=forms.Textarea, label='Mensaje')
 
 class ZapatoForm(ModelForm):
 	class Meta:

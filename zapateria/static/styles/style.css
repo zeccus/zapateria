@@ -18,9 +18,8 @@ html
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
-button{
 
-}
+
 body
 {
 	font-family: "Open Sans", Arial, Verdana, Helvetica, sans-serif;
@@ -29,6 +28,24 @@ body
 	padding: 0 0 20px 0;
 	background: #FFF url("../images/bg.png") repeat;
 }
+
+button { 
+background: -webkit-linear-gradient(top, #949494, #0c0d0b);
+background: -moz-linear-gradient(top, #949494, #0c0d0b);
+background: -ms-linear-gradient(top, #949494, #0c0d0b);
+background: -o-linear-gradient(top, #949494, #0c0d0b);
+color: #EEE;
+display: inline-block;
+font-family: use-lang-def;
+font-size: 14px;
+font-weight: 400;
+padding: 0px 10px;
+text-align: center;
+text-indent: 0px;
+white-space: nowrap;
+background-color: #111;
+}
+
 
 ::selection { background: #000; color: #FFF; }
 ::-moz-selection { background: #000; color: #FFF; }
@@ -177,7 +194,7 @@ article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-rep
 					letter-spacing: -0.3px;
 					font-family: "Orienta", Arial, Helvetica, sans-serif;
 				}
-								
+
 					.container #menucont ul li a:hover, .container #menucont ul li.active a
 					{
 						color: #FFF;
@@ -197,10 +214,10 @@ article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-rep
 	
 		.container #maincont p { margin: 0 0 20px 0; }
 		.container #maincont h1, .container #maincont h2, .container #maincont h3, .container #maincont h4, .container #maincont h5 { margin: 0 0 20px 0; color: #444; font-weight: normal; letter-spacing: -1px; font-family: "Orienta", Arial, Helvetica, sans-serif; }
-		.container #maincont h1 { font-size: 26px; line-height: 26px; }
-		.container #maincont h2 { font-size: 24px; line-height: 24px; }
-		.container #maincont h3 { font-size: 24px; line-height: 24px; }
-		.container #maincont h4 { font-size: 22px; line-height: 22px; }
+		.container #maincont h1 { font-size: 26px; line-height: 26px; color: #000}
+		.container #maincont h2 { font-size: 24px; line-height: 24px; color: #000}
+		.container #maincont h3 { font-size: 24px; line-height: 24px; color: #000}
+		.container #maincont h4 { font-size: 22px; line-height: 22px; color: #000}
 		.container #maincont h5 { font-size: 20px; line-height: 20px; }
 		.container #maincont ul { margin: 0 0 15px 35px; list-style-type: square; }
 		.container #maincont ul li { padding: 0 0 0 2px; }
@@ -211,6 +228,7 @@ article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-rep
 	
 			.container #maincont #mainleft
 			{
+
 				float: left;
 				width: 72%;
 				padding: 20px 3% 0 0;
@@ -429,5 +447,6 @@ article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-rep
 				padding: 0%;
 				margin: 0 0 15px 0;
 			}
+
 }
 
