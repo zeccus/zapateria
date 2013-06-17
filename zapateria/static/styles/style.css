@@ -18,7 +18,9 @@ html
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
+button{
 
+}
 body
 {
 	font-family: "Open Sans", Arial, Verdana, Helvetica, sans-serif;
@@ -35,6 +37,7 @@ a { color: #00B2E0; text-decoration: none; -webkit-transition: all 0.2s linear; 
 a:hover { color: #222; }
 
 /** Layout Styles **/
+
 article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-repeat; margin:19px 0px 0 0px; height:571px; overflow:hidden; padding:0px; text-align: center;}
 .container
 {
@@ -174,7 +177,7 @@ article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-rep
 					letter-spacing: -0.3px;
 					font-family: "Orienta", Arial, Helvetica, sans-serif;
 				}
-				
+								
 					.container #menucont ul li a:hover, .container #menucont ul li.active a
 					{
 						color: #FFF;
@@ -211,12 +214,12 @@ article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-rep
 				float: left;
 				width: 72%;
 				padding: 20px 3% 0 0;
-				
-				min-height: 400px;
+				min-height: 300px;
 				height: auto !important;
-				height: 400px;
+				height: 400px;				
 			}
-			
+
+	
 			.container #maincont #mainright
 			{
 				float: left;
@@ -332,7 +335,7 @@ article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-rep
 {
 	.container
 	{
-		
+	
 	}
 	
 		.container #headercont #headerlogo, .container #headercont #headerright

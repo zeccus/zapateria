@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang='es'>
 <head>
-  <style>
-img { width:125px;}
 
-</style>
 <link  href="{{STATIC_URL}}images/garabatos.png" rel="shortcut icon" type="image/x-icon" />
       <h1><title>Calzados Garabatos</title></h1>
 <link rel="stylesheet" href="{{STATIC_URL}}styles/style.css" type="text/css" />
@@ -51,7 +48,7 @@ img { width:125px;}
 <dir><h4>Descripción : {{dato.descripcion}}</h4></dir>
 <dir><h4>Genero : {{dato.genero}}</h4></dir>
 <dir><h4>Marca : {{dato.marca}}</h4></dir>
-<dir><a class="thumbnail" href="#thumb"><img src='{{MEDIA_URL}}{{dato.imagen}}' />
+<dir><a class="thumbnail" href="#thumb"><img src='{{MEDIA_URL}}{{dato.imagen}}' width="200" height="200"/>
 </a></dir>
 </br>
   {% for item in datos_zapato %}
@@ -61,16 +58,14 @@ img { width:125px;}
 
 </body>
 
-
-
 <footer>
  <br class="clear" />
 <center>
   <p class="tagline_left">Calzados Garabatos &copy;<br> Calle Doctor Creus, 4 <br> Calle Palencia, 10  <br>  18007 (Granada,Andalucia,España)  <br> </p>
-    <br class="clear" /></center></br>
-          </center>  <img class="imgr" src="{{STATIC_URL}}images/garabatos.png" alt="" width="100" height="100" /></center><br><br><br>
+    <br class="clear" /></br>
+          <img class="imgr" src="{{STATIC_URL}}images/garabatos.png" alt="" width="100" height="100" /><br><br><br>
           Todos Los Derechos Reservados
-      </br></br><a href="/tipo"> <h5>Ver Calzados Garabatos la web normal</h5></a>
+      </br></br><a href="/tipo"> <h5>Ver Calzados Garabatos la web normal</h5></a>  </center>
 
   </footer>
     

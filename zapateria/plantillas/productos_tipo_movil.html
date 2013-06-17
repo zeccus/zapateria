@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang='es'>
 <head>
-  <style>
-img { width:275px;}
 
-</style>
 <link  href="{{STATIC_URL}}images/garabatos.png" rel="shortcut icon" type="image/x-icon" />
       <h1><title>Calzados Garabatos</title></h1>
 <link rel="stylesheet" href="{{STATIC_URL}}styles/style.css" type="text/css" />
@@ -46,24 +43,25 @@ img { width:275px;}
 <div class="container clearfix">
   <div id="maincont" class="clearfix">
     <div id="mainleft">
-{% for elemento in zapato %} 
-<a href="{% url 'principal_productos_movil' elemento.id %}">
-  <dir><h4> {{dato.tipo}} {{elemento.marca}} </h4></dir>
-<dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'></dir></a>
 
-{% endfor %}
-</div>
+    {% for elemento in zapato %} 
+
+      <a href="{% url 'principal_productos_movil' elemento.id %}">
+      <dir><h4> {{dato.tipo}} {{elemento.marca}} </h4></dir>
+      <dir><img src='{{MEDIA_URL}}{{elemento.imagen}}'width="200" height="200"></dir></a>
+
+    {% endfor %}
+
+    </div>
 
 </body>
-
-
 
 <footer>
  <br class="clear" />
 <center>
-  <p class="tagline_left">Calzados Garabatos &copy;<br> Calle Doctor Creus, 4 <br> Calle Palencia, 10  <br>  18007 (Granada,Andalucia,España)  <br> </p>
-    <br class="clear" /></center></br></br>
-        </br></br><a href="/contacto"> <h5>Ver Calzados Garabatos la web normal</h5></a>
+  <p class="tagline_left">Calzados Garabatos &copy;<br> Calle Doctor Creus, 4 <br> Calle Palencia, 10  <br>  18007 (Granada,Andalucia,España)   </p>
+    <br class="clear" /> <img class="imgr" src="{{STATIC_URL}}images/garabatos.png" alt="" width="100" height="100" />
+        </br></br><a href="/contacto"> <h5>Ver Calzados Garabatos la web normal</h5></a></center>
   </footer>
     
 </html>
