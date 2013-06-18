@@ -16,6 +16,19 @@ img { width:200px;}
 
 <?php require_once ('{{STATIC_URL}}scripts/Mobile_Detect.php');
 $detect = new Mobile_Detect(); ?>
+<script type="text/javascript">
+//Mobile Detection and Redirecting
+var device = navigator.userAgent
+
+if (device.match(/Iphone/), device.match(/Ipod/), device.match(/Ipad/), device.match(/Android/), device.match(/J2ME/), device.match(/HTC/)) {
+window.location = "/movil";
+}
+else
+{
+
+}
+//
+</script>
 
 
 <!--
