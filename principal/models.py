@@ -88,3 +88,10 @@ class Detalle(models.Model):
     #def __unicode__(self):
      #   return self.numproduc
 
+class Noticia(models.Model):
+    titulo = models.CharField(max_length=250)
+    autor = models.ForeignKey(User, related_name="entradas_blog")
+    fecha_pub = models.DateTimeField(auto_now=True)
+    cuerpo = models.TextField()
+    def __unicode__(self):
+        return self.titulo

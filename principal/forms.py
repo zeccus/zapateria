@@ -1,7 +1,7 @@
 #encoding:utf-8
 from django.forms import ModelForm
 from django import forms
-from principal.models import Zapato, Marca, Persona
+from principal.models import Zapato, Marca, Persona, Noticia
 
 class ContactoForm(forms.Form):
 	correo = forms.EmailField(label='Correo Electronico')
@@ -14,4 +14,6 @@ class ZapatoForm(ModelForm):
 class MarcaForm(ModelForm):
 	class Meta:
 		model = Marca
-
+class NoticiasForm(ModelForm):
+	class Meta:
+		model = Noticia

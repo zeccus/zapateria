@@ -1,5 +1,5 @@
-from principal.models import Empleados,Almacen,Zapato,Series,Genero,Color,Marca,Persona,Cabecera,Detalle,Tipo
-from principal.forms import ContactoForm,ZapatoForm,MarcaForm
+from principal.models import Empleados,Almacen,Zapato,Series,Genero,Color,Marca,Persona,Cabecera,Detalle,Tipo,Noticia
+from principal.forms import ContactoForm,ZapatoForm,MarcaForm,NoticiasForm
 from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
@@ -8,8 +8,9 @@ from django.core.mail import EmailMessage
 from util import decoradores
 
 def index(request):
+	dato = Noticia.objects.all()
 	context_instance = RequestContext(request)
-	return render_to_response('index.html',context_instance)
+	return render_to_response('index.html',{'dato':dato},context_instance)
 
 def indexMovil(request):
 	context_instance = RequestContext(request)
@@ -58,6 +59,16 @@ def catalogoMovil(request):
 	dato = Tipo.objects.all().order_by('tipo')
 	context_instance = RequestContext(request)
 	return render_to_response('catalogoMovil.html',{'dato':dato},context_instance)
+
+'''  Paginacion
+def catalogoMovil(request):
+	dato = Tipo.objects.all().order_by('tipo')
+	pag = Paginador(request, dato)
+	context_instance = RequestContext(request)
+	return render_to_response('catalogoMovil.html',{'noticia_list': pag['modelo'],'request': request,
+				     'paginator': pag},context_instance)
+'''
+
 
 def tipo_zapato (request, id_tipo):
 	dato = get_object_or_404(Tipo, pk=id_tipo)
@@ -145,6 +156,16 @@ def proovedores(request,id_proovedor):
 	proovedores = Persona.objects.filter(nombre = dato).values()
 	context_instance = RequestContext(request)
 	return render_to_response('proovedorlista.html',{'proovedores':proovedores},context_instance)
+
+def nueva_noticia(request):
+	if request.method == 'POST':
+		formulario = NoticiasForm(request.POST)
+		if formulario.is_valid():
+			formulario.save()
+			return HttpResponseRedirect('/')
+	else:
+		formulario = NoticiasForm()
+	return render_to_response('noticias.html',{'formulario':formulario},context_instance=RequestContext(request))
 
 def contacto(request):
 	if request.method=='POST' :

@@ -17,21 +17,30 @@ img { width:200px;}
 <?php require_once ('{{STATIC_URL}}scripts/Mobile_Detect.php');
 $detect = new Mobile_Detect(); ?>
 
-<!--COMENTARIO CREOO QUE SERIA ASI PERO NO FUNCIONA
+<!--
+COMENTARIO CREOO QUE SERIA ASI PERO NO FUNCIONA
 <?php if ($detect->isMobile()) {
 //detecta si es movil
+  http_redirect("/movil")
 }
 if ($detect->isTablet()){
 //Detecta si es tablet
+    http_redirect("/movil")
 }
 if ($detect->isAndroidOS()){
 //Detecta sistema operativo android
+    http_redirect("/movil")
 }
 if ($detect->isiOS()){
 //Detecta sistema operativo aios!
+    http_redirect("/movil")
 }else{
 }
-?>-->
+?
+-->
+
+
+
 <?php requiere_once('{{STATIC_URL}}scripts/mail(to, subject, message))');
 ~detect 
 
@@ -84,6 +93,7 @@ window.scrollTo(300,500);
           <li><a href="/sobregarabatos">Sobre nosotros</a></li>
           <li><a href="/contacto">Donde encontrarnos</a></li>
           <li><a href="/contactoform">Contácta por E-Mail</a></li>
+          <li><a href="/noticias">Noticias</a></li>
         </ul>
       </li>
     </ul>

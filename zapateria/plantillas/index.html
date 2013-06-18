@@ -33,10 +33,29 @@
       <section class="jFlowNext"></section>
   </div>
 </div>
-
-
 {% endblock %}
-
 {% block contenido %}
+{% for elemento in dato %}
 
+
+<div class="box">
+            <div class="content">
+              <h5><center>{{elemento.titulo}}</center></h5>
+              <p><div>{{elemento.fecha_pub}}</p></br>
+            </div>     
+            <div><p></center>{{elemento.cuerpo}}</center></p></br>
+</div>
+    
+
+
+
+
+      </div>
+      
+  
+      
+      <div class="clear"></div>
+    </div>
+
+{% endfor %}
 {% endblock %}
