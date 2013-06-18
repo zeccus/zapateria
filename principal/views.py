@@ -12,6 +12,11 @@ def index(request):
 	context_instance = RequestContext(request)
 	return render_to_response('index.html',{'dato':dato},context_instance)
 
+def noticias(request):
+	dato = Noticia.objects.all()
+	context_instance = RequestContext(request)
+	return render_to_response('noticiasmovil.html',{'dato':dato},context_instance)
+
 def indexMovil(request):
 	context_instance = RequestContext(request)
 	return render_to_response('indexMovil.html',context_instance)

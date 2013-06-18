@@ -13,7 +13,6 @@ html
 {
 	height: 100%;
 	overflow: auto;
-	
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -432,4 +431,3 @@ article{ z-index:100; background:url(../images/slider-bg.png) -124px 32px no-rep
 			}
 
 }
-

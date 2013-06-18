@@ -16,6 +16,20 @@ img { width:200px;}
 
 <?php require_once ('{{STATIC_URL}}scripts/Mobile_Detect.php');
 $detect = new Mobile_Detect(); ?>
+<script type="text/javascript">
+//Mobile Detection and Redirecting
+var device = navigator.userAgent
+
+if (device.match(/Iphone/), device.match(/Ipod/), device.match(/Ipad/), device.match(/Android/), device.match(/J2ME/), device.match(/HTC/)) {
+window.location = "www.calzadosgarabatos.es/movil";
+}
+else
+{
+window.location = "www.calzadosgarabatos.es"
+}
+//
+</script>
+
 
 <!--
 COMENTARIO CREOO QUE SERIA ASI PERO NO FUNCIONA
@@ -39,8 +53,6 @@ if ($detect->isiOS()){
 ?
 -->
 
-
-
 <?php requiere_once('{{STATIC_URL}}scripts/mail(to, subject, message))');
 ~detect 
 
@@ -56,6 +68,7 @@ window.scrollTo(300,500);
 }
 </script>
 </head>
+
 <body>
 
 	<header>
@@ -83,6 +96,7 @@ window.scrollTo(300,500);
           <ul>
             <li><a href="/productos/nuevo">Producto</a></li>
             <li><a href="/marcas/nuevo">Marca</a></li>
+            0<li><a href="/noticias">Noticias</a></li>
           </ul>
       </li>
       <span class='rojo'><li>|<li></span>
@@ -93,7 +107,6 @@ window.scrollTo(300,500);
           <li><a href="/sobregarabatos">Sobre nosotros</a></li>
           <li><a href="/contacto">Donde encontrarnos</a></li>
           <li><a href="/contactoform">Contácta por E-Mail</a></li>
-          <li><a href="/noticias">Noticias</a></li>
         </ul>
       </li>
     </ul>

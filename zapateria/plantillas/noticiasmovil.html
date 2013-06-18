@@ -30,7 +30,6 @@
             <a href="/movil/catalogo"><button>Catálogo</button></a>
             <a href="/movil/contacto"><button>Donde encontrarnos</button></a>
             <a href="/movil/contactoforms"><button>Contácta por E-Mail</button></a>
-         
           </li>
         </ul>
   </div>
@@ -38,16 +37,18 @@
 <div class="container clearfix">
   <div id="maincont" class="clearfix">
     <div id="mainleft">
-      <h1>Calzados Garabatos</h1>
-            <p>Calzados Garabatos es una empresa familiar fundada en 1987, una referencia en el sector del calzado infantil y juvenil en granada, donde a través de la experiencia y los años nos hemos convertido en un claro referente dentro del mundo del calzado.</p><p>En Calzados Garabatos siempre buscamos los mejores fabricantes dentro y fuera de España, luchando por mantener nuestro compromiso de productos de alta calidad y diseño, que puedan mantener satisfechos a todos nuestros clientes,productos que ayuden al buen desarrollo de los pies de sus hijos,  siguiendo siempre las últimas tendencias de moda, conjugando la modernidad y la tradición
-      <hr />
-            <h2>Sobre el Calzado</h2>
-            <p>Elegir un buen calzado para nuestros hijos es siempre de gran importancia, pues debemos tomárnoslo como un factor muy importante para el perfecto desarrollo del bebe, la misión del calzado para los primeros pasos de un bebe es esencial, respetando la fisonomía del cuerpo evitamos posibles problemas de espaldas y al andar, sobre todo si ya existen patologías para tener que aplicar un calzado correctivo</p><p> Un zapato debe ser siempre flexible, pudiendo doblar la suela facilmente con la mano; el tamaño debe ser lo bastante ancho y largo para que permita el movimiento de los dedos y estos no lleguen al final del zapato, dejando aproximadamente 1 cm de espacio; los materiales deben ser naturales y de calidad para que permitan una mejor transpiración de la piel; es necesario también elegir el modelo que mejor se adapte al pie, que lleve una buena sujeción tanto de cordones, velcro o hebilla, como de talón.</p><p>Ha pesar de todo esto y aun eligiendo el mejor calzado posible no debe olvidar que los zapatos, en especial las deportivas son sólo para algunas horas al día, se debe intentar siempre tener en casa zapatos todavía mas cómodos, como zapatillas de casa.</p>
-        </div>
-</body>
+      {% for elemento in dato %}
 
-<footer>
- <br class="clear" />
+            <h3><center>{{elemento.titulo}}</center></h3></br></br>
+            <p><div>{{elemento.fecha_pub}}</p></br>
+            </div>     
+            <div><p></center>{{elemento.cuerpo}}</center></p></br>
+
+      
+      <div class="clear"></div>
+
+
+{% endfor %}
 <center>
   <p class="tagline_left">Calzados Garabatos &copy;<br> Calle Doctor Creus, 4 <br> Calle Palencia, 10  <br>  18007 (Granada,Andalucia,España)  <br> </p>
     <br class="clear" /></br>

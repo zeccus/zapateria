@@ -7,7 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$','principal.views.index'),
-
+    url(r'^movil/noticias$','principal.views.noticias'),
     url(r'^movil/$','principal.views.indexMovil'),
 
     url(r'^movil/catalogo/$','principal.views.catalogoMovil'),
